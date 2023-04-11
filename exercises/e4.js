@@ -5,7 +5,21 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsWithLowGravity(data) {
-  // Your code goes here...
+    // Your code goes here...
+    let answer = []
+    const planets = data.planets;
+    planets.map(function(planet) {
+        //console.log(planet)
+        console.log(planet.gravity)
+        if (planet.gravity < 10) {
+
+            answer.push(planet.name)
+
+        }
+        return answer;
+    });
+    console.log(answer)
+    return answer
 }
 
 

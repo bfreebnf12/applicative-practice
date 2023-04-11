@@ -5,12 +5,20 @@ import { data } from "../data/data";
 // Return example: [1, 2, ... , N]
 
 export function getAllAverageTemperatures(data) {
-  // Your code goes here...
+    // Your code goes here...
+
+    const answer = data.planets.map(function(getPlanets) {
+        return getPlanets.avgTemp
+    });
+    return answer;
 }
 
 
 
+
+
+
 // === TEST YOURSELF ===
-// Once you're finished run the test with "npm run test-3"
+// Once you're finished run thet with "npm run test-3"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function

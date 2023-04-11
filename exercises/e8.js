@@ -5,8 +5,26 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  // Your code goes here...
+    // Your code goes here...
+    let planetName = ""
+    const planets = data.planets;
+    planets.map(function(planets) {
+        //console.log(planet)
+        if (planets.moons !== undefined) {
+            //console.log(planets.name)
+            const result = planets.moons.filter(planet => planet === moonName)
+            if (result.length === 1) {
+                planetName = planets.name
+            }
+        }
+    });
+
+    //console.log(planets);
+    console.log(planetName)
+    return planetName
 }
+
+
 
 
 

@@ -5,12 +5,24 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetNames(data) {
-  // Your code goes here...
+    // Your code goes here...
+    const planetNames = data.planets;
+    const results = planetNames.map(function(getNames) {
+        return getNames.name;
+    });
+    return results;
 }
+
+
+
+
+
+
+
 
 
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"
 // If the test has all tests passed, switch to the next exercise file
-// If any of the tests fails, refactor the code and run the test command after you've fixed the function
+// If any of the tests fails, refactor the code and run the test command after you've fixed the functionapplicative-practice

@@ -5,8 +5,14 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidNames(data) {
-  // Your code goes here...
+    // Your code goes here...
+    const asteroidsNames = data.asteroids;
+    const answer = asteroidsNames.map(function(getNames) {
+        return getNames.name;
+    });
+    return answer;
 }
+
 
 
 
