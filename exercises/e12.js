@@ -6,19 +6,13 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
     // Your code goes here...
-    let sum = 0;
-    const planetsAndMoons = data.planets;
-    planetsAndMoons.map(function(planets) {
-        planets.moonsCount
-        console.log(planetsAndMoons)
-        if (planets.moonsCount !== undefined)
-            if (planets.moonsCount) {
-                sum += planets.moonsCount
-            }
-    });
-    console.log(sum)
-    return sum
+
+    return data.planets
+        .filter((planets) => planets.moonsCount !== undefined)
+        .map((planet) => planet.moonsCount)
+        .reduce((acc, curr) => acc + curr)
 }
+
 
 
 // === TEST YOURSELF ===

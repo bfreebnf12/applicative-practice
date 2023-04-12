@@ -6,13 +6,9 @@ import { data } from "../data/data";
 
 export function getAllAverageTemperatures(data) {
     // Your code goes here...
+    return data.planets.map((planet) => planet.avgTemp)
 
-    const answer = data.planets.map(function(getPlanets) {
-        return getPlanets.avgTemp
-    });
-    return answer;
 }
-
 
 
 

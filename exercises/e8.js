@@ -6,23 +6,16 @@ import { data } from "../data/data";
 
 export function findPlanetNameByMoon(data, moonName) {
     // Your code goes here...
-    let planetName = ""
-    const planets = data.planets;
-    planets.map(function(planets) {
-        //console.log(planet)
-        if (planets.moons !== undefined) {
-            //console.log(planets.name)
-            const result = planets.moons.filter(planet => planet === moonName)
-            if (result.length === 1) {
-                planetName = planets.name
-            }
-        }
-    });
-
-    //console.log(planets);
-    console.log(planetName)
-    return planetName
+    const [arr] = data.planets
+        .filter((planet) => planet.moons !== undefined)
+        .filter((planet) => planet.moons.find((moon) => moon === moonName))
+        .map((planet) => planet.name)
+    return arr
 }
+
+
+
+
 
 
 

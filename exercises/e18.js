@@ -5,6 +5,19 @@ import { data } from "../data/data";
 // SPACE DATA EXERCISE 16
 // Return the year with the greatest number of Asteroids discoveries
 // Return example: 1902
+function maxBy(object) {
+    let max = 0;
+    let Year = ''
+    for (let element in object) {
+        console.log(element, object[element])
+        if (object[element] > max) {
+            max = object[element]
+            Year = element
+
+        }
+    }
+    return parseInt(Year)
+}
 
 export function getGreatestDiscoveryYear(data) {
     // Your code goes here...
@@ -23,19 +36,7 @@ export function getGreatestDiscoveryYear(data) {
     }, {});
     return maxBy(countNames)
 
-    function maxBy(object) {
-        let max = 0;
-        let Year = ''
-        for (let element in object) {
-            console.log(element, object[element])
-            if (object[element] > max) {
-                max = object[element]
-                Year = element
 
-            }
-        }
-        return parseInt(Year)
-    }
 }
 
 
